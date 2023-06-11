@@ -111,6 +111,7 @@ class QuizViewController: UIViewController {
             }
         }
     }
+
     @IBAction func selectedSecondButton(_ sender: UIButton) {
         selectedButton = 1
         
@@ -133,6 +134,7 @@ class QuizViewController: UIViewController {
             }
         }
     }
+
     @IBAction func selectedThirdButton(_ sender: UIButton) {
         selectedButton = 2
         
@@ -155,6 +157,7 @@ class QuizViewController: UIViewController {
             }
         }
     }
+
     @IBAction func selectedFourthButton(_ sender: UIButton) {
         selectedButton = 3
         
