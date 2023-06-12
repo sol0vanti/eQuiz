@@ -187,7 +187,7 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="selectFirstButtonOnce:" destination="jgI-s6-nea" eventType="touchUpInside" id="cAu-24-GOd"/>
+                                            <action selector="didSelectButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="GBS-th-EvG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-y8-Kxl">
@@ -201,7 +201,7 @@
                                             <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="selectedSecondButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="1EF-JM-gNb"/>
+                                            <action selector="didSelectButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="FA6-J6-0qr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOr-SN-BMS">
@@ -215,7 +215,7 @@
                                             <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="selectedThirdButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="4Yz-c9-npu"/>
+                                            <action selector="didSelectButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="ctO-il-vj7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22e-Oq-kBh">
@@ -229,7 +229,7 @@
                                             <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="selectedFourthButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="XUY-H9-8Zz"/>
+                                            <action selector="didSelectButton:" destination="jgI-s6-nea" eventType="touchUpInside" id="aoX-n6-NEg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -291,10 +291,6 @@
                     </view>
                     <navigationItem key="navigationItem" style="editor" id="ojh-il-C6o"/>
                     <connections>
-                        <outlet property="buttonFour" destination="22e-Oq-kBh" id="LWK-pu-6hZ"/>
-                        <outlet property="buttonOne" destination="JAf-ep-nJX" id="tCn-cK-UWf"/>
-                        <outlet property="buttonThree" destination="NOr-SN-BMS" id="Id6-dk-30V"/>
-                        <outlet property="buttonTwo" destination="NcP-y8-Kxl" id="8eZ-qv-1Ut"/>
                         <outlet property="dashedLineView" destination="KW3-pY-TzV" id="7qm-zL-Jm8"/>
                         <outlet property="nickname" destination="yzn-73-g8w" id="GZf-ED-hBl"/>
                         <outlet property="progressiveView" destination="gxw-tm-2Gv" id="n8i-n2-J3z"/>
@@ -302,10 +298,10 @@
                         <outlet property="questionNumberLabel" destination="Kfh-Ua-Yhe" id="Gxz-H6-jia"/>
                         <outlet property="questionView" destination="GkZ-HX-6Qk" id="q0m-eL-uIM"/>
                         <outlet property="scoreLabel" destination="pLG-a2-6ad" id="UEK-EA-4NY"/>
-                        <outletCollection property="questionButtons" destination="JAf-ep-nJX" collectionClass="NSMutableArray" id="IRD-Lt-8u1"/>
-                        <outletCollection property="questionButtons" destination="NcP-y8-Kxl" collectionClass="NSMutableArray" id="lUy-EE-XL2"/>
-                        <outletCollection property="questionButtons" destination="NOr-SN-BMS" collectionClass="NSMutableArray" id="GMC-OR-W9O"/>
-                        <outletCollection property="questionButtons" destination="22e-Oq-kBh" collectionClass="NSMutableArray" id="5dD-Xo-AlB"/>
+                        <outletCollection property="questionButtons" destination="JAf-ep-nJX" collectionClass="NSMutableArray" id="vJg-wz-JCp"/>
+                        <outletCollection property="questionButtons" destination="NcP-y8-Kxl" collectionClass="NSMutableArray" id="FyN-ON-9xS"/>
+                        <outletCollection property="questionButtons" destination="NOr-SN-BMS" collectionClass="NSMutableArray" id="ABZ-3i-Cx0"/>
+                        <outletCollection property="questionButtons" destination="22e-Oq-kBh" collectionClass="NSMutableArray" id="4sd-r0-3Xi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0G2-1k-6d8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
