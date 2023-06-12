@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  QuizzGame
-//
-//  Created by Alex on 10.06.2023.
-//
-
 import UIKit
 
 class EnterQuizViewController: UIViewController {

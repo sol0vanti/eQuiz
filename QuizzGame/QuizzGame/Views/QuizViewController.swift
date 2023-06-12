@@ -1,13 +1,7 @@
-//
-//  QuizViewController.swift
-//  QuizzGame
-//
-//  Created by Alex on 10.06.2023.
-//
-
 import UIKit
 
 class QuizViewController: UIViewController {
+    @IBOutlet var questionNumberLabel: UILabel!
     @IBOutlet var progressiveView: UIProgressView!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var questionLabel: UILabel!
@@ -20,16 +14,14 @@ class QuizViewController: UIViewController {
     @IBOutlet var questionView: UIView!
     @IBOutlet var dashedLineView: UIView!
     
-    var score = 0
-    var correctAnswer = 0
-    var question = 0
-    var selectedButton = 0
-    var progress = 0.0
-    
-    let questions = ["", "What's 4 + 4", "What's 2^3", "What's 4/2", "What's 5*4"]
-    let correctAnswers = [69696969969, 8, 9, 2, 20]
-    
-    var nicknameText: String = ""
+    public var score: Int = 0
+    private var correctAnswer: Int = 0
+    private var question: Int = 0
+    private var selectedButton: Int = 0
+    private var progress: Float = 0.0
+    private let questions: [String] = ["What's 4 + 4", "What's 2^3", "What's 4/2", "What's 5*4", "What's √25"]
+    private let correctAnswers: [Int] = [ 8, 16, 2, 20, 5]
+    public var nicknameText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +36,8 @@ class QuizViewController: UIViewController {
         }
         
         questionView.layer.cornerRadius = 30
-        
         nickname.text = nicknameText
-        
         askQuestion()
-        
         progressiveView.setProgress(Float(progress), animated: false)
     }
     
@@ -65,36 +54,43 @@ class QuizViewController: UIViewController {
     }
     
     func askQuestion() {
-        if question == questions.count - 1 {
+        if question == questions.count {
             let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
             vc?.score = score
+            vc?.totalQuestions = questions.count
             self.navigationController?.pushViewController(vc!, animated: true)
         } else {
-            progress += 0.25
+            questionNumberLabel.text = "Question \(question + 1)/\(questions.count)"
+            progress += 0.2
             progressiveView.setProgress(Float(progress), animated: true)
             scoreLabel.text = "Score: \(score)"
-            question += 1
             questionLabel.text = questions[question]
+            
             for questionButton in questionButtons {
                 var randomNumber = Int.random(in: 0...15)
                 
                 while randomNumber == correctAnswers[question] {
                     randomNumber = Int.random(in: 0...15)
                 }
-                
                 questionButton.setTitle("\(randomNumber)", for: .normal)
             }
+            
             correctAnswer = Int.random(in: 0...3)
             questionButtons[correctAnswer].setTitle("\(correctAnswers[question])", for: .normal)
+            question += 1
         }
     }
     
     @IBAction func selectFirstButtonOnce(_ sender: UIButton) {
         selectedButton = 0
-        
         UIView.animate(withDuration: 0.4){
-            self.buttonOne.backgroundColor = .systemGreen
-            self.buttonOne.tintColor = .white
+            if self.selectedButton == self.correctAnswer {
+                self.buttonOne.backgroundColor = .systemGreen
+                self.buttonOne.tintColor = .white
+            } else {
+                self.buttonOne.backgroundColor = .systemRed
+                self.buttonOne.tintColor = .white
+            }
         } completion: { _ in
             UIView.animate(withDuration: 0.2) {
                 self.view.alpha = 0
@@ -111,12 +107,17 @@ class QuizViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func selectedSecondButton(_ sender: UIButton) {
         selectedButton = 1
-        
         UIView.animate(withDuration: 0.4){
-            self.buttonTwo.backgroundColor = .systemGreen
-            self.buttonTwo.tintColor = .white
+            if self.selectedButton == self.correctAnswer {
+                self.buttonTwo.backgroundColor = .systemGreen
+                self.buttonTwo.tintColor = .white
+            } else {
+                self.buttonTwo.backgroundColor = .systemRed
+                self.buttonTwo.tintColor = .white
+            }
         } completion: { _ in
             UIView.animate(withDuration: 0.2) {
                 self.view.alpha = 0
@@ -133,12 +134,17 @@ class QuizViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func selectedThirdButton(_ sender: UIButton) {
         selectedButton = 2
-        
         UIView.animate(withDuration: 0.4){
-            self.buttonThree.backgroundColor = .systemGreen
-            self.buttonThree.tintColor = .white
+            if self.selectedButton == self.correctAnswer {
+                self.buttonThree.backgroundColor = .systemGreen
+                self.buttonThree.tintColor = .white
+            } else {
+                self.buttonThree.backgroundColor = .systemRed
+                self.buttonThree.tintColor = .white
+            }
         } completion: { _ in
             UIView.animate(withDuration: 0.2) {
                 self.view.alpha = 0
@@ -155,12 +161,17 @@ class QuizViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func selectedFourthButton(_ sender: UIButton) {
         selectedButton = 3
-        
         UIView.animate(withDuration: 0.4){
-            self.buttonFour.backgroundColor = .systemGreen
-            self.buttonFour.tintColor = .white
+            if self.selectedButton == self.correctAnswer {
+                self.buttonFour.backgroundColor = .systemGreen
+                self.buttonFour.tintColor = .white
+            } else {
+                self.buttonFour.backgroundColor = .systemRed
+                self.buttonFour.tintColor = .white
+            }
         } completion: { _ in
             UIView.animate(withDuration: 0.2) {
                 self.view.alpha = 0
