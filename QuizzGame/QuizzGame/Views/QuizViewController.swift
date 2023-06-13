@@ -21,9 +21,13 @@ class QuizViewController: UIViewController {
     private let questions = ["What's 4 + 4", "What's 2^3", "What's 4/2", "What's 5*4", "What's √25"]
     private let correctAnswers = [8, 16, 2, 20, 5]
     public var nicknameText = ""
+    public var timeSpent: Int = 0
+    private var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reset()
         
         drawDottedLine(start: CGPoint(x: dashedLineView.bounds.minX, y: dashedLineView.bounds.minY), end: CGPoint(x: dashedLineView.bounds.maxX, y: dashedLineView.bounds.minY), view: dashedLineView)
         
@@ -38,6 +42,9 @@ class QuizViewController: UIViewController {
         questionView.layer.cornerRadius = 30
         nickname.text = nicknameText
         progressiveView.setProgress(Float(progress), animated: false)
+        
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
 
         displayQuestion()
     }
@@ -66,7 +73,6 @@ class QuizViewController: UIViewController {
             }
         }
     }
-
 }
 
 private extension QuizViewController {
@@ -94,9 +100,14 @@ private extension QuizViewController {
 
     func moveToResults() {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController
+        timer.invalidate()
         vc?.score = score
         vc?.totalQuestions = questions.count
-        self.navigationController?.pushViewController(vc!, animated: true)
+        vc?.nickname = nicknameText
+        vc?.timeSpent = timeSpent
+    
+        vc?.modalPresentationStyle = .overFullScreen
+        self.present(vc!, animated: true)
     }
 
     func displayQuestion() {
@@ -115,5 +126,16 @@ private extension QuizViewController {
         correctAnswer = Int.random(in: 0...3)
         questionButtons[correctAnswer].setTitle("\(correctAnswers[currentQuestion])", for: .normal)
     }
-
+    
+    @objc func updateTime() {
+        timeSpent += 1
+    }
+    
+    func reset(){
+        currentQuestion = 0
+        score = 0
+        correctAnswer = 0
+        currentQuestion = 0
+        timeSpent = 0
+    }
 }
