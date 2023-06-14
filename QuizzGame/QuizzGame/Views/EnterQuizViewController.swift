@@ -4,6 +4,8 @@ class EnterQuizViewController: UIViewController {
     @IBOutlet var nicknameEntry: UITextField!
     @IBOutlet var startButton: UIButton!
     
+    public var timeSpent: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		71E9C2652A37BEC00047989B /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E9C2642A37BEC00047989B /* Int.swift */; };
+		FA1073462A38C4E900C1BA71 /* UITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1073452A38C4E900C1BA71 /* UITabBarViewController.swift */; };
+		FA6F20362A3A28ED00935A3D /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F20352A3A28ED00935A3D /* PersonCell.swift */; };
 		FA9D8B792A36156900683A96 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8B782A36156900683A96 /* ResultViewController.swift */; };
 		FAC7416A2A34911D00D2D6A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC741692A34911D00D2D6A8 /* AppDelegate.swift */; };
 		FAC7416C2A34911D00D2D6A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7416B2A34911D00D2D6A8 /* SceneDelegate.swift */; };
 		FAC7416E2A34911D00D2D6A8 /* EnterQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC7416D2A34911D00D2D6A8 /* EnterQuizViewController.swift */; };
 		FAC741712A34911D00D2D6A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC7416F2A34911D00D2D6A8 /* Main.storyboard */; };
-		FAC741742A34911D00D2D6A8 /* QuizzGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC741722A34911D00D2D6A8 /* QuizzGame.xcdatamodeld */; };
+		FAC741742A34911D00D2D6A8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC741722A34911D00D2D6A8 /* Model.xcdatamodeld */; };
 		FAC741762A34911E00D2D6A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC741752A34911E00D2D6A8 /* Assets.xcassets */; };
 		FAC741792A34911E00D2D6A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC741772A34911E00D2D6A8 /* LaunchScreen.storyboard */; };
 		FACE58042A34BB1800905AE0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE58032A34BB1800905AE0 /* QuizViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		71E9C2642A37BEC00047989B /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		FA1073452A38C4E900C1BA71 /* UITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarViewController.swift; sourceTree = "<group>"; };
+		FA6F20352A3A28ED00935A3D /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		FA9D8B782A36156900683A96 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FAC741662A34911D00D2D6A8 /* QuizzGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC741692A34911D00D2D6A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +78,8 @@
 		FAC741682A34911D00D2D6A8 /* QuizzGame */ = {
 			isa = PBXGroup;
 			children = (
-				71E9C2632A37BEB80047989B /* Extensions */,
 				FAC7417A2A34911E00D2D6A8 /* Info.plist */,
+				71E9C2632A37BEB80047989B /* Extensions */,
 				FAC741832A34914A00D2D6A8 /* Storyboards */,
 				FAC741822A34913B00D2D6A8 /* Resources */,
 				FAC741812A34913500D2D6A8 /* Views */,
@@ -100,6 +104,8 @@
 				FACE58032A34BB1800905AE0 /* QuizViewController.swift */,
 				FA9D8B782A36156900683A96 /* ResultViewController.swift */,
 				FACE58052A34BB4C00905AE0 /* QuizHistoryTableViewController.swift */,
+				FA1073452A38C4E900C1BA71 /* UITabBarViewController.swift */,
+				FA6F20352A3A28ED00935A3D /* PersonCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,7 +113,7 @@
 		FAC741822A34913B00D2D6A8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FAC741722A34911D00D2D6A8 /* QuizzGame.xcdatamodeld */,
+				FAC741722A34911D00D2D6A8 /* Model.xcdatamodeld */,
 				FAC741752A34911E00D2D6A8 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -196,9 +202,11 @@
 				FAC7416E2A34911D00D2D6A8 /* EnterQuizViewController.swift in Sources */,
 				FACE58042A34BB1800905AE0 /* QuizViewController.swift in Sources */,
 				FA9D8B792A36156900683A96 /* ResultViewController.swift in Sources */,
+				FA1073462A38C4E900C1BA71 /* UITabBarViewController.swift in Sources */,
 				FAC7416A2A34911D00D2D6A8 /* AppDelegate.swift in Sources */,
 				FAC7416C2A34911D00D2D6A8 /* SceneDelegate.swift in Sources */,
-				FAC741742A34911D00D2D6A8 /* QuizzGame.xcdatamodeld in Sources */,
+				FA6F20362A3A28ED00935A3D /* PersonCell.swift in Sources */,
+				FAC741742A34911D00D2D6A8 /* Model.xcdatamodeld in Sources */,
 				FACE58062A34BB4C00905AE0 /* QuizHistoryTableViewController.swift in Sources */,
 				71E9C2652A37BEC00047989B /* Int.swift in Sources */,
 			);
@@ -426,13 +434,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FAC741722A34911D00D2D6A8 /* QuizzGame.xcdatamodeld */ = {
+		FAC741722A34911D00D2D6A8 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				FAC741732A34911D00D2D6A8 /* QuizzGame.xcdatamodel */,
 			);
 			currentVersion = FAC741732A34911D00D2D6A8 /* QuizzGame.xcdatamodel */;
-			path = QuizzGame.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
