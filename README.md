@@ -17,3 +17,6 @@ eQuiz is a math quiz app, which has beautiful animations, saves your results, na
 - Dates & Timers,
 - TableViews...
 
+And of course eQuiz app itself is open source with a _public repository_ 
+on GitHub.
+
