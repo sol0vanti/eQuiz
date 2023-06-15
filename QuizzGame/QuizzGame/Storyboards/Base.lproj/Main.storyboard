@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Result View Controller-->
+        <!--Finish Test View Controller-->
         <scene sceneID="skz-zc-wCA">
             <objects>
-                <viewController storyboardIdentifier="ResultViewController" id="ckG-YS-ndD" customClass="ResultViewController" customModule="QuizzGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="ckG-YS-ndD" customClass="FinishTestViewController" customModule="QuizzGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHg-Hn-Dxj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,41 +375,63 @@
             </objects>
             <point key="canvasLocation" x="-65" y="418"/>
         </scene>
-        <!--Quiz History Table View Controller-->
+        <!--Quiz Results Table View Controller-->
         <scene sceneID="l6q-bR-wyc">
             <objects>
-                <tableViewController id="51g-d8-N2u" customClass="QuizHistoryTableViewController" customModule="QuizzGame" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="51g-d8-N2u" customClass="QuizResultsTableViewController" customModule="QuizzGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wLt-J4-yTC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="oEg-qG-mdb" detailTextLabel="cLf-ai-mml" style="IBUITableViewCellStyleSubtitle" id="Ljv-Kp-61C" customClass="PersonCell" customModule="QuizzGame" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="57.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Ljv-Kp-61C" customClass="PersonCell" customModule="QuizzGame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ljv-Kp-61C" id="XTN-no-l1E">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="57.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oEg-qG-mdb" userLabel="nickname">
-                                            <rect key="frame" x="20.000000000000004" y="10.666666666666666" width="38.333333333333336" height="21.666666666666668"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nickname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGg-Q1-8AF">
+                                            <rect key="frame" x="15" y="5" width="64" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cLf-ai-mml" userLabel="date">
-                                            <rect key="frame" x="19.999999999999996" y="32.666666666666671" width="43.666666666666664" height="14.333333333333334"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwC-sm-Otx">
+                                            <rect key="frame" x="15" y="24.999999999999996" width="25" height="14.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4C-ZL-VBs">
+                                            <rect key="frame" x="333.33333333333331" y="7.6666666666666661" width="14.666666666666686" height="28.666666666666671"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                            <color key="textColor" systemColor="systemGreenColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bF6-2m-U96" userLabel="Time">
+                                            <rect key="frame" x="50" y="24.333333333333332" width="25" height="14.999999999999996"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="V4C-ZL-VBs" secondAttribute="trailing" constant="25" id="FXZ-Lk-U1L"/>
+                                        <constraint firstItem="bF6-2m-U96" firstAttribute="leading" secondItem="wwC-sm-Otx" secondAttribute="trailing" constant="10" id="Hx7-UU-4zP"/>
+                                        <constraint firstItem="wwC-sm-Otx" firstAttribute="leading" secondItem="XTN-no-l1E" secondAttribute="leading" constant="15" id="SNf-j0-FoR"/>
+                                        <constraint firstAttribute="bottom" secondItem="bF6-2m-U96" secondAttribute="bottom" constant="4.5" id="XVd-Jc-4er"/>
+                                        <constraint firstAttribute="bottom" secondItem="wwC-sm-Otx" secondAttribute="bottom" constant="4.5" id="b9m-Hb-6bh"/>
+                                        <constraint firstItem="vGg-Q1-8AF" firstAttribute="top" secondItem="XTN-no-l1E" secondAttribute="top" constant="5" id="iz5-Ik-diX"/>
+                                        <constraint firstItem="V4C-ZL-VBs" firstAttribute="centerY" secondItem="XTN-no-l1E" secondAttribute="centerY" id="mTZ-em-lSO"/>
+                                        <constraint firstItem="vGg-Q1-8AF" firstAttribute="leading" secondItem="XTN-no-l1E" secondAttribute="leading" constant="15" id="opz-Tr-GbZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="date" destination="cLf-ai-mml" id="7ik-PH-mgN"/>
-                                    <outlet property="nickname" destination="oEg-qG-mdb" id="rVd-Ms-5BZ"/>
+                                    <outlet property="date" destination="wwC-sm-Otx" id="yaA-kY-QbI"/>
+                                    <outlet property="nickname" destination="vGg-Q1-8AF" id="aeY-jP-Qsi"/>
+                                    <outlet property="score" destination="V4C-ZL-VBs" id="VUQ-MM-zaa"/>
+                                    <outlet property="timeSpent" destination="bF6-2m-U96" id="ToL-ei-dBC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -429,7 +451,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OCp-zY-uSi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Results" id="yQJ-iI-yNi">
-                        <imageReference key="image" image="list.bullet.circle.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="list.number" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gz5-5e-vLM">
@@ -450,7 +472,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UdC-p6-vzT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Quiz" id="3RK-29-uPw">
-                        <imageReference key="image" image="star.circle.fill" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="list.bullet.clipboard.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hcr-ys-eIS">
@@ -491,8 +513,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.bullet.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="star.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.clipboard.fill" catalog="system" width="103" height="128"/>
+        <image name="list.number" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
