@@ -18,7 +18,7 @@
 <li> Animations,</li>
 <li> UIKit & CoreData,</li>
 <li> Dates & Timers,</li>
-<li> TableViews...</li>
+<li> TableViews..</li>
 </ul>
 
 And of course `eQuiz` app itself is open source with a `public repository` on GitHub.
