@@ -9,10 +9,9 @@
 
 <h2>👀 App Preview</h2>
 <div align="center" style="margin: 30px;">
-  <img height="400" src="https://github.com/skxnz/Taxi-App/blob/main/App-preview-Images/Start-screen.png" alt="Start screen">
-  <img height="400" src="https://github.com/skxnz/Taxi-App/blob/main/App-preview-Images/Person-location.png" alt="Person location">
-  <img height="400" src="https://github.com/skxnz/Taxi-App/blob/main/App-preview-Images/Route-traced.png" alt="Route traced">
-  <img height="400" src="https://github.com/skxnz/Taxi-App/blob/main/App-preview-Images/Payment-screen.png" alt="Payment screen">
+  <img height="400" src="https://github.com/skxnz/eQuiz/blob/main/App-preview-Images/Start-screen.png" alt="Start screen">
+  <img height="400" src="https://github.com/skxnz/eQuiz/blob/main/App-preview-Images/Quiz.png" alt="Quiz">
+  <img height="400" src="https://github.com/skxnz/eQuiz/blob/main/App-preview-Images/Results.png" alt="Results">
 </div>
 <h3>⚡️ Features</h3>
 <ul>
